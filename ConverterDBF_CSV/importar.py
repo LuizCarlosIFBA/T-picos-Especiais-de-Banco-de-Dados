@@ -3,12 +3,12 @@ from sqlalchemy import create_engine
 
 # === CONFIGURAÇÕES ===
 usuario = 'root'
-senha = ''
+senha = '' #caso tenha senha no banco coloque, eu uso xampp então por padrão não vem senha
 host = 'localhost'
-porta = '3306'
-banco = 'sergipe'
-tabela = 'fato_sergipe'
-csv_path = '/home/luiz/Documentos/TEBD/CSV/tabelaFatoSE.csv'
+porta = '3306' #você pode mudar caso tenha outra porta
+banco = 'sergipe' #nome do seu banco
+tabela = 'nome_tabela'
+csv_path = '/seu/caminho/arquivo.csv'
 
 # === CONECTA NO BANCO ===
 engine = create_engine(f'mysql+pymysql://{usuario}:{senha}@{host}:{porta}/{banco}')
